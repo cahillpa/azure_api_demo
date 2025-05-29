@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Build and package with Maven
-        run: mvn clean package
+        run: mvn clean package azure-functions:package
 
       - name: List deployment folder contents (debug)
         run: ls -R target/azure-functions/azure-api-demo-function
