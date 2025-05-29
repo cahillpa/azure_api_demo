@@ -46,6 +46,7 @@
                             <value>~4</value>
                         </property>
                     </appSettings>
+
                     <disableDefaultHostJson>true</disableDefaultHostJson>
                 </configuration>
             </plugin>
