@@ -35,9 +35,14 @@ jobs:
       - name: List deployment folder contents (debug)
         run: ls -R target/azure-functions/azure-api-demo-function
 
+      - name: Zip function app files
+        run: |
+          cd target/azure-functions/azure-api-demo-function
+          zip -r ../../functionapp.zip .
+
       - name: Deploy to Azure Functions
         uses: azure/functions-action@v1
         with:
           app-name: azure-api-demo-function
-          package: target/azure-functions/azure-api-demo-function
+          package: target/functionapp.zip
           publish-profile: ${{ secrets.PUBLISH_AZURE_FUNCTIONS }}
