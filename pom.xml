@@ -46,8 +46,7 @@
                             <value>~4</value>
                         </property>
                     </appSettings>
-
-                    <disableDefaultHostJson>true</disableDefaultHostJson>
+                    <hostJson>${project.basedir}/src/main/azure/host.json</hostJson>
                 </configuration>
             </plugin>
 
