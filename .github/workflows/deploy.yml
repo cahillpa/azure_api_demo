@@ -36,4 +36,4 @@ jobs:
         with:
           app-name: azure-api-demo-function  # Replace with your Azure Function App name
           package: target/azure-functions/azure-api-demo-function
-          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.PUBLISH_AZURE_FUNCTIONS }}

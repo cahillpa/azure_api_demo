@@ -11,7 +11,7 @@ public class HelloFunction {
             HttpRequestMessage<Optional<String>> request,
             ExecutionContext context
     ) {
-        context.getLogger().info("Hello function triggered.");
+        context.getLogger().info("AWESOME Hello function triggered.");
         return request.createResponseBuilder(HttpStatus.OK).body("Hello, world!").build();
     }
 }
