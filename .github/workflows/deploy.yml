@@ -33,7 +33,13 @@ jobs:
         run: mvn clean package azure-functions:package
 
       - name: List deployment folder contents (debug)
-        run: ls -R target/azure-functions/azure-api-demo-function
+        run: |
+          cd target/azure-functions/azure-api-demo-function
+          cp ../../../src/main/azure/host.json *
+        
+
+      - name: List deployment folder contents (debug)
+        run: ls -l -R target/azure-functions/azure-api-demo-function
 
       - name: Zip function app files
         run: |
