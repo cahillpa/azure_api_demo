@@ -32,11 +32,8 @@ jobs:
       - name: Build and package with Maven
         run: mvn clean package azure-functions:package
 
-      - name: List deployment folder contents (debug)
-        run: |
-          cd target/azure-functions/azure-api-demo-function
-          cp ../../../src/main/azure/host.json *
-        
+      - name: copy host.json
+        run: cp src/main/azure/host.json target/azure-functions/azure-api-demo-function/host.json
 
       - name: List deployment folder contents (debug)
         run: ls -l -R target/azure-functions/azure-api-demo-function
